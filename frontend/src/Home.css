@@ -1,0 +1,93 @@
+/* Home.css */
+.section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* Ensures sections stack vertically */
+    text-align: center;
+    justify-content: center;
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    z-index: 1000; 
+  }
+  
+  /* Section 1 with image background */
+  .section1 {
+    background-image: url('./images/bg1.png'); 
+    background-size: cover;
+    background-position: center;
+    color: black; /* Set text color for better readability */
+    /* padding-top: 60px;  */
+  }
+  
+  /* Styling for other sections */
+  .section2,
+  .section3 {
+    background-color: #f0f0f0; /* Example background color for sections 2 and 3 */
+  }
+  
+  .text-image-container {
+    display: flex; /* Use Flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    margin-top: 20px; /* Adjust top margin as needed */
+  }
+  
+  /* Style for the text */
+  .text {
+    flex: 1; /* Let the text take available space */
+    max-width: 30%; /* Limit the maximum width of the text container */
+    text-align: left;
+    font-family: 'Poppins';
+    margin-left: auto;
+    margin-right: -100px;
+
+  }
+
+  .gradient-text {
+    background-image: linear-gradient(to right, #1F4590, #FF5733); /* Set gradient colors */
+  -webkit-background-clip: text; /* Clip the text using the gradient */
+  color: transparent; /* Set text color to transparent */
+  }
+  
+  /* Style for the image */
+  .image {
+    flex: 1; /* Let the image take available space */
+    max-width: 50%; /* Limit the maximum width of the image container */
+    text-align: center; /* Align the image to the center */
+    align-items: left;
+    margin-left: -10px;
+    margin-right: 100px;
+
+  }
+  
+  .image img {
+    max-width: 44%; /* Reduce the size of the image */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .centered-button {
+    position: absolute;
+    /* bottom: 0; */
+    left: 30%;
+    /* transform: translateX(-50%); */
+    /* margin-top: 20px; */
+  }
+  
+  .booking-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1F4590;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    /* Add more styles as needed */
+  }

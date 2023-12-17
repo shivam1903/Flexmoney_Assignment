@@ -1,0 +1,47 @@
+/* Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Align children to each end */
+    align-items: center; /* Vertically center the items */
+    background-color: transparent; /* Set background color as transparent */
+    /* color: white; */
+    /* padding: 10px 20px; */
+  }
+  
+  /* Styles for company name */
+  .company-name {
+    font-weight: bold;
+    /* font-size: 1.2em; */
+    font-family: 'Poppins';
+    color: black;
+  }
+
+  .flex-text {
+    color: #1F4590; /* Different color for "FLEX" */
+    font-size: 1.8em; /* Different font size for "FLEX" */
+  }
+  
+  /* Style for "YOGA" */
+  .yoga-text {
+    color: #FF5733; /* Different color for "YOGA" */
+    font-size: 1.5em; /* Different font size for "YOGA" */
+  }
+  
+  /* Styles for right-aligned links/options */
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Style for booking link */
+  .booking-link {
+    color: #1F4590;
+    margin-right: 75px;
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-size: 1em;
+  }
+  
+  /* Additional styles for other links/options */
+  /* ... */
+  
