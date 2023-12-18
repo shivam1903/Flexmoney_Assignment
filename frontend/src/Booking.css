@@ -1,0 +1,44 @@
+/* Booking.css */
+.booking-heading {
+    text-align: center;
+    margin-top: 70px;
+  }
+  
+  .form-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .booking-form {
+    width: 50%;
+    margin-top: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type='text'],
+  input[type='email'],
+  input[type='tel'],
+  textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #1F4590;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
