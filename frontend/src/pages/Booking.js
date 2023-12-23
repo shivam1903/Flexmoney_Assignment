@@ -2,15 +2,61 @@
 import React from 'react';
 import Navbar from '../components/Navbar.js';
 import '../Booking.css';
-
+import axios from 'axios';
 
 const Booking = () => {
+
+  const SubmitForm = async () => {
+    const fullName = document.getElementById("fullName").value;
+    const phoneNumber = document.getElementById("phoneNumber").value;
+    const email = document.getElementById("email").value;
+    const birthdate = document.getElementById("birthdate").value;
+    const batch = document.getElementById("choice").value;
+    const body = {
+      fullName: fullName,
+      phoneNumber: phoneNumber,
+      email: email,
+      birthdate: birthdate,
+      batch: batch,
+      }
+
+      console.log(typeof(birthdate));
+      const checkDate = new Date(birthdate);
+      const currDate = new Date();
+      const age = currDate.getFullYear() - checkDate.getFullYear();
+
+      if (
+        currDate.getMonth() < checkDate.getMonth() ||
+        (currDate.getMonth() === checkDate.getMonth() &&
+          currDate.getDate() < checkDate.getDate())
+      ) {
+        age = age - 1;
+      }
+
+      if(age>65 || age <18){
+        alert("You are too old or young");
+        return;
+      }
+      await axios.post("http://127.0.0.1:5000/sendData", body).then(
+        response => {
+          console.log(response.data);
+        }
+      )
+    
+    }
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+
+    }
+  
+
   return (
     <div>
         <Navbar />
       <h1 className="booking-heading">Booking Form</h1>
       <div className="form-container">
-        <form className="booking-form">
+        <form className="booking-form" onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="fullName">Full Name:</label>
             <input type="text" id="fullName" name="fullName" pattern="[a-Z]" required/>
@@ -49,12 +95,9 @@ const Booking = () => {
               <option value="option4">5:00 PM - 6:00 PM</option>
             </select>
           </div>
+          
           <div className="form-group">
-            <label htmlFor="message">Message:</label>
-            <textarea id="message" name="message" rows="4"></textarea>
-          </div>
-          <div className="form-group">
-            <button type="submit">Submit</button>
+            <button type="submit" onClick={SubmitForm}>Submit</button>
           </div>
         </form>
       </div>
